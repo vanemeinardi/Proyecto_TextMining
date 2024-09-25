@@ -17,7 +17,7 @@ En este trabajo, se propone utilizar la estructura de comunidades en redes socia
 - Pre-Procesar los ejemplos del dataset con un stemmer (de scikit-learn) en español quitando hashtags, nombres de usuario y urls.
 - Convertir los tweets en vectores usando tfidf vectorizer
 - Entrenar una regresión logística multi-clase para encontrar los unigramas más distintivos para cada clase.
-- Entrenar con clasificadores XGBoosT y Regeresion Logistica
+- Entrenar con clasificadores XGBoosT y Regresion Logistica
 - Bísqueda de hiperparámetros con Grid Search sobre los parámetros de interés con K-Fold Cross Validation (k=10)
 
 **Referencias**
