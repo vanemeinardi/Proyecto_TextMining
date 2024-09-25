@@ -4,11 +4,11 @@
 En este trabajo, se propone utilizar la estructura de comunidades en redes sociales para asignar posturas a los tuits , desarrollando una solución automatizada para detectar posturas a favor y en contra de la Interrupción Voluntaria del Embarazo en Twitter. Este análisis se fundamenta en datos relacionados con el tratamiento del proyecto en las cámaras de Diputados y Senadores de Argentina durante 2018. Se empleará un dataset, obtenido y preprocesado por Pablo Celayes, que incluye tuits recogidos en torno a fechas clave del tratamiento, utilizando hashtags relevantes.
 
 **Objetivos Preliminares**
-Procesar la base de datos (Semana 25/09)
-Detectar comunidades y analizar si se corresponden con stances (Semanas 30/09 y 07/10)
-Detectar tópicos y analizar si se corresponden con stances (Semana 14-10)
-Construcción de  características textuales, estructurales y conversacionales (Semanas 21/10-28/10)
-Aprender dos clasificadores de stance usando comunidades como clases y usando tópicos como clases (Todo el mes de noviembre) 
+- Procesar la base de datos (Semana 25/09)
+- Detectar comunidades y analizar si se corresponden con stances (Semanas 30/09 y 07/10)
+- Detectar tópicos y analizar si se corresponden con stances (Semana 14-10)
+- Construcción de  características textuales, estructurales y conversacionales (Semanas 21/10-28/10)
+- Aprender dos clasificadores de stance usando comunidades como clases y usando tópicos como clases (Todo el mes de noviembre) 
 
 **Técnicas que vamos a usar**
 
