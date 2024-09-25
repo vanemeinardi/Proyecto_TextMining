@@ -12,24 +12,24 @@ En este trabajo, se propone utilizar la estructura de comunidades en redes socia
 
 **Técnicas que vamos a usar**
 
-Para detectar comunidades, utilizaremos el algoritmo de Louvain para  la maximización de la modularidad 
-Se implementará el modelo LDA (Latent Dirichlet Allocation) para detectar tópicos
-Pre-Procesar los ejemplos del dataset con un stemmer (de scikit-learn) en español quitando hashtags, nombres de usuario y urls.
-Convertir los tweets en vectores usando tfidf vectorizer
-Entrenar una regresión logística multi-clase para encontrar los unigramas más distintivos para cada clase.
-Entrenar con clasificadores XGBoosT y Regeresion Logistica
-Bísqueda de hiperparámetros con Grid Search sobre los parámetros de interés con K-Fold Cross Validation (k=10)
+- Para detectar comunidades, utilizaremos el algoritmo de Louvain para  la maximización de la modularidad 
+- Se implementará el modelo LDA (Latent Dirichlet Allocation) para detectar tópicos
+- Pre-Procesar los ejemplos del dataset con un stemmer (de scikit-learn) en español quitando hashtags, nombres de usuario y urls.
+- Convertir los tweets en vectores usando tfidf vectorizer
+- Entrenar una regresión logística multi-clase para encontrar los unigramas más distintivos para cada clase.
+- Entrenar con clasificadores XGBoosT y Regeresion Logistica
+- Bísqueda de hiperparámetros con Grid Search sobre los parámetros de interés con K-Fold Cross Validation (k=10)
 
 **Referencias**
- Furman et al. "You can simply rely on communities for a robust characterization of stances". 2021 (https://hal.science/hal-03260142)
- Tesis de Grado MAriano Schmidt: " Explotando características contextuales para la detección de posturas en Twitter en el marco de la vacunación del COVID-19 en Argentina
- Pamungkas et al. "Exploiting Affective Information and Conversation Structure, 2nd International Workshop on Rumours and Deception in Social Media (RDSM)". 2018 (https://arxiv.org/pdf/1901.01911.pdf)
- Addawood et al. "Stance Classification of Twitter Debates: The Encryption Debate as A Use Case". 2017 ( http://hdl.handle.net/2142/96250)
- Gach et al. "Improving the Louvain Algorithm for Community Detection with Modularity Maximization". 2014 (https://doi.org/10.1007/978-3-319-11683-9_12)
+ - Furman et al. "You can simply rely on communities for a robust characterization of stances". 2021 (https://hal.science/hal-03260142)
+ - Tesis de Grado MAriano Schmidt: " Explotando características contextuales para la detección de posturas en Twitter en el marco de la vacunación del COVID-19 en Argentina
+ - Pamungkas et al. "Exploiting Affective Information and Conversation Structure, 2nd International Workshop on Rumours and Deception in Social Media (RDSM)". 2018 (https://arxiv.org/pdf/1901.01911.pdf)
+ - Addawood et al. "Stance Classification of Twitter Debates: The Encryption Debate as A Use Case". 2017 ( http://hdl.handle.net/2142/96250)
+ - Gach et al. "Improving the Louvain Algorithm for Community Detection with Modularity Maximization". 2014 (https://doi.org/10.1007/978-3-319-11683-9_12)
 
  **Evaluación**
- Anécdotica para comparar comunidades y tópicos con stances
- Precisión, Recall, F1-Score, Macro Avg para los clasificadores
+ - Anécdotica para comparar comunidades y tópicos con stances
+ - Precisión, Recall, F1-Score, Macro Avg para evaluar la performance de los clasificadores
 
   
   
