@@ -18,7 +18,7 @@ En este trabajo, se propone utilizar la estructura de comunidades en redes socia
 - Convertir los tweets en vectores usando tfidf vectorizer
 - Entrenar una regresión logística multi-clase para encontrar los unigramas más distintivos para cada clase.
 - Entrenar con clasificadores XGBoosT y Regresion Logistica
-- Bísqueda de hiperparámetros con Grid Search sobre los parámetros de interés con K-Fold Cross Validation (k=10)
+- Búsqueda de hiperparámetros con Grid Search sobre los parámetros de interés con K-Fold Cross Validation (k=10)
 
 **Referencias**
  - Furman et al. "You can simply rely on communities for a robust characterization of stances". 2021 (https://hal.science/hal-03260142)
