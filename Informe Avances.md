@@ -38,11 +38,8 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 12.  De las comunidades obtenidas, queremos determinar las posturas. Para ello, construimos la tabla  comunidades_completo.csv (filtrando las observaciones que quedaron del punto anterior).
 13.  Como una primera medida de las comunidades hacemos la matriz de confusion entre posturas obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’.
 14. Extraemos aleatoriamente 20 tweets de cada comunidad. Este proceso nos permitirá evaluarlos de manera anecdótica y, posteriormente, elaborar la matriz de confusión que compare nuestras evaluaciones con las comunidades.
-
-15. 
-17. 15. Asumiendo que esta asociación entre posiciones y comunidades es correcta, agrupamos las primeras comunidades mencionadas para formar una única (comunidad 2).La comunidad 2 fue llamada comunidad 0
-Al hacer lla matriz de confusión comunidad vs. posición, 
-De todos los usuarios mas influyentes que hemos seleccionado, la comunidad 0 representa el 65% de los usuarios, por lo tanto la comunidad 1 el 35%.
+15. Hacemos la matriz de confusion entre la evaluacion anecdotica, y obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’. 
+16. Definimos una nueva variable llamada postura que asignamos la categoría si a los tweets que estan en las comunidades 0,1, 3 y 19 y no a los tweets que estan en la comunidad 2. Exportamos la base como 'comunidades.csv'
 ##0.3 LDA.ipynb
 ##0.4 obtencion_caractesticas_comunidades
 
