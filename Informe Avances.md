@@ -41,10 +41,10 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 15. Hacemos la matriz de confusion entre la evaluacion anecdotica, y obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’. 
 16. Definimos una nueva variable llamada postura que asignamos la categoría si a los tweets que estan en las comunidades 0,1, 3 y 19 y no a los tweets que estan en la comunidad 2. Exportamos la base como 'comunidades.csv'.
 
-## 0.2.1 obtencion_caractesticas_comunidades
+## 0.2.1 obtencion_caractesticas_comunidades.ipynb
 Extraemos características de los tweets que puedan ser utilizadas como variables explicativas en modelos de clasificación, donde la variable dependiente a predecir son las comunidades a las que pertenecen los usuarios. Para ello
 1. Leemos la base de datos 'comunidades.csv'.  
-2. Obtenemos las características textuales de los tweets:   
+2. Obtenemos las características estructurales de los tweets:   
    **`Question Mark`:** Indica si el tweet contiene al menos un signo de interrogación (¿ o ?).  
    **`Question Mark Count`:** Cuenta el número total de signos de interrogación.  
    **`Starts with Question Mark`:** Indica si el tweet comienza con un signo de interrogación.  
@@ -57,7 +57,12 @@ Extraemos características de los tweets que puedan ser utilizadas como variable
    **`Text Length`:** Largo del texto del tweet después de eliminar menciones, URLs y hashtags.  
    **`URL Count`:** Cuenta el número de URLs incluidas en el tweet.  
    **`Quotes`:** Indica si el tweet contiene palabras entre comillas.  
-
+3. Exportamos la base con las caracteristicas como 'Caracteristicas_comunidades.csv'.  
+4. Identificamos los unigramas más distintivos de cada comunidad para usarlas como características:  
+   4.1. Pre-Procesamos todos tweets del dataset con un stemmer (de scikit-learn) en español quitando hashtags, nombres de usuario y urls.  
+   4.2. Convertimos los tweets en vectores usando tfidf vectorizer y utilizamos éstos para entrenar una regresión logística, alcanzando un accuracy de 0.89.  
+   4.3. Una vez entrenado el modelo, tomamos las 20 palabras con coeficientes de mayor mayor peso en valor absoluto.  
+   4.4. 
    
 ##0.3 LDA.ipynb
 
