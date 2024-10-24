@@ -25,9 +25,10 @@ Filtramos la base por las  columnas de interés: retweet_count, full_text, user_
 
 ## 02.Deteccion_comunidades.ipynb
 1. Leemos la base de datos tweets_junio_procesados.csv.
-2. Generamos dos nuevas columnas: "mención" y "retweet".
-La primera columna, "mención", extrae el `screen_name` de los usuarios que han sido mencionados en el tweet, ya sea de manera intencional o a través de un retweet. La segunda columna, "retweet", es de tipo booleano y señala si el tweet es un retweet o no.
-3. Leemos la base de datos aborto_junio_users.csv para extraer la identidad del screen_name, y así generar una nueva columna ‘user_name_mencion’. Filtramos los tweets y seleccionamos aquellos que han sido retuiteado más de 5 veces. La columna ‘user_name’ contiene quien lo retuitió y la columna ‘user_name_mencion’ tiene el nombre del usuario que escribió el tweet original o quien fue mencionado.
+2. Generamos dos nuevas columnas: mención y retweet.
+La primera columna, **mención**, extrae el `screen_name` de los usuarios que han sido mencionados en el tweet, ya sea de manera intencional o a través de un retweet. La segunda columna, **retweet**, es de tipo booleano y señala si el tweet es un retweet o no.
+3. De la base de datos datos aborto_junio_users.csv vamos a extraer la identidad del screen_name, y así generar una nueva columna **user_name_mencion**.
+4.  Cremamos un nuevo dataframe llamado df_pares_filtrados que incluye las columnas user_name, user_name_mencion, full_text y posicion y seleccionamos únicamente los tweets que han sido retuiteado más de 5 veces. 
 Construimos el grafo donde los nodos son los nombres de los usuarios que aparecen tanto en columnas user_name como en user_name_mencion. Los nodos van estar conectados si ha habido interaccion entre ellos,ya sea un retweet o una mención.
 
 Aplicamos el algoritmo de Louvain con escalado progresivo de la resolución con valores Ninguna, 0, 1, 2 y 3. La resolución óptima obtenida fue Ninguna.
