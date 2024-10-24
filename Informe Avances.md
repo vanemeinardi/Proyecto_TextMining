@@ -36,10 +36,18 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 9. Volvemos a calcular las particiones por comunidades utilizando una resolución de `None` en el DataFrame `filtered_comunidades`, que incluye únicamente a los usuarios de las 5 comunidades más grandes. Además, incorporamos el grado de centralidad para identificar los nodos más conectados dentro de cada comunidad.
 10. Observamos que muchos presentaban valores bajos en este indicador. Para optimizar el análisis, probamos reducir el número de nodos con los grados de centralidad más altos, evaluando reducciones del 50%, 25% y 15%. Al notar que la disminución de observaciones no era significativa en las distintas pruebas realizadas, decidimos quedarnos con la reducción del 15%.
 12.  De las comunidades obtenidas, queremos determinar las posturas. Para ello, construimos la tabla  comunidades_completo.csv (filtrando las observaciones que quedaron del punto anterior).
-13. Extraemos aleatoriamente 20 tweets de cada comunidad. Este proceso nos permitirá evaluarlos de manera anecdótica y, posteriormente, elaborar la matriz de confusión que compare nuestras evaluaciones con las comunidades.  
-Al hacer lla matriz de confusión comunidad vs. posición, obtenemos que la comunidad 0,1, 3 y 19, corresponden a la posición ‘si’; la comunidad 2 a la posición ‘no’. Asumiendo que esta asociación entre posiciones y comunidades es correcta, agrupamos las primeras comunidades mencionadas para formar una única (comunidad 2).La comunidad 2 fue llamada comunidad 0 
+13.  Como una primera medida de las comunidades hacemos la matriz de confusion entre posturas obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’.
+14. Extraemos aleatoriamente 20 tweets de cada comunidad. Este proceso nos permitirá evaluarlos de manera anecdótica y, posteriormente, elaborar la matriz de confusión que compare nuestras evaluaciones con las comunidades.
+
+15. 
+17. 15. Asumiendo que esta asociación entre posiciones y comunidades es correcta, agrupamos las primeras comunidades mencionadas para formar una única (comunidad 2).La comunidad 2 fue llamada comunidad 0
+Al hacer lla matriz de confusión comunidad vs. posición, 
 De todos los usuarios mas influyentes que hemos seleccionado, la comunidad 0 representa el 65% de los usuarios, por lo tanto la comunidad 1 el 35%.
+##0.3 LDA.ipynb
+##0.4 obtencion_caractesticas_comunidades
 
 
-   
+## Cronograma de trabajo
+- Construcción de  características textuales, estructurales y conversacionales (28/10)
+- Aprender dos clasificadores de stance usando comunidades como clases y usando tópicos como clases (Todo el mes de noviembre) 
 
