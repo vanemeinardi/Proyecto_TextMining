@@ -67,12 +67,16 @@ Extraemos características de los tweets que puedan ser utilizadas como variable
 ## 0.3 LDA.ipynb   
 Vamos a aplicar el modelo LDA (Latent Dirichlet Allocation) para detectar tópicos presentes en los tweets, con el objetivo de utilizarlos como posibles posturas.
 1. Leemeos la base de datos 'tweets_junio_procesado.csv'.
-2. Limpiamos la base:
-   2.1.  Eliminamos aquellos tweets que estaban recortados, ya que durante los experimentos con LDA introducían ruido y afectaban negativamente los resultados.   
+2. Limpiamos la base:  
+   2.1.  Eliminamos aquellos tweets que estaban recortados, ya que durante los experimentos con LDA introducían ruido y afectaban negativamente los resultados. Exportamos la nueva tabla como 'tweets_junio_recortados.csv'.   
    2.2. Eliminamos URLs, menciones de usuarios y el símbolo de numeral (#) en los hashtags, manteniendo únicamente el texto. La eliminacion completa de los hashtags empeoraban la deteccion de tópicos, por lo tanto fueron conservados.  
    2.3. Eliminamos de puntuación, RT (retweets) y stopwords.
-   2.4. Convertimos todo el texto  de los tweets a minúsculas.
-
+   2.4. Convertimos todo el texto  de los tweets a minúsculas.  
+3. Para mejorar la detección de tópicos en los tweets, balanceamos los datos mediante un submuestreo de la clase mayoritaria. Esto permitió una mejor identificación de tópicos, ya que inicialmente, al aplicar LDA, predominaban palabras relacionadas con la postura 'sí'.
+4. Aplicamos CountVectorizer, donde el min_df=10000 (solo se consideraron palabras que aparecían al menos 10.000 veces) y max_df=0.99 (se excluyeron palabras que aparecían en más del 99% de los tweets).
+5. Ajuste del modelo LDA:
+   5.1. Entrenamos el modelo LDA sobre el conjunto balanceado con 2 tópicos. Este número fue elegido tras realizar varias pruebas con distintos valores de tópicos.
+   5.2. Utilizamos el modelo entrenado para predecir los tópicos en el conjunto completo de tweets_junio_recortados.
    
 ## Cronograma de trabajo
 - Construcción de  características textuales, estructurales y conversacionales (28/10)
