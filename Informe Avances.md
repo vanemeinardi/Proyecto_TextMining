@@ -43,20 +43,20 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 
 ##0.2.1 obtencion_caractesticas_comunidades
 Extraemos características de los tweets que puedan ser utilizadas como variables explicativas en modelos de clasificación, donde la variable dependiente a predecir son las comunidades a las que pertenecen los usuarios. Para ello
-1. Leemos la base de datos 'comunidades.csv'.
-2. Obtenemos las características textuales de los tweets:
-   **`Question Mark`:** Indica si el tweet contiene al menos un signo de interrogación (¿ o ?).
-   **`Question Mark Count:`** Cuenta el número total de signos de interrogación.
-   **`Starts with Question Mark:`** Indica si el tweet comienza con un signo de interrogación.
-   **`Ends with Mark Count:`** Indica si el tweet termina con un signo de interrogación.
-   **`Upper Ratio:`** Proporción de letras en mayúsculas sobre el total de letras en el tweet.
-   **`Exclamation Mark:`** Indica si el tweet contiene al menos un signo de admiración (¡ o !)
-   **`Exclamation Mark Count:`**  Cuenta el número total de signos de admiración en el tweet.
-   **`Ellipsis Occurrence:`**  Indica si el tweet contiene tres o más puntos seguidos ("...")
-   **`Hashtag Presence:**` Indica si el tweet incluye hashtags.
-   **`Text Length:**` Largo del texto del tweet después de eliminar menciones, URLs y hashtags.
-   **`URL Count:**` Cuenta el número de URLs incluidas en el tweet.
-   **`Quotes:**` Indica si el tweet contiene palabras entre comillas
+1. Leemos la base de datos 'comunidades.csv'.  
+2. Obtenemos las características textuales de los tweets:   
+   **`Question Mark`:** Indica si el tweet contiene al menos un signo de interrogación (¿ o ?).  
+   **`Question Mark Count:`** Cuenta el número total de signos de interrogación.  
+   **`Starts with Question Mark:`** Indica si el tweet comienza con un signo de interrogación.  
+   **`Ends with Mark Count:`** Indica si el tweet termina con un signo de interrogación.  
+   **`Upper Ratio:`** Proporción de letras en mayúsculas sobre el total de letras en el tweet.  
+   **`Exclamation Mark:`** Indica si el tweet contiene al menos un signo de admiración (¡ o !).  
+   **`Exclamation Mark Count:`**  Cuenta el número total de signos de admiración en el tweet.  
+   **`Ellipsis Occurrence:`**  Indica si el tweet contiene tres o más puntos seguidos ("...").  
+   **`Hashtag Presence:**` Indica si el tweet incluye hashtags.  
+   **`Text Length:**` Largo del texto del tweet después de eliminar menciones, URLs y hashtags.  
+   **`URL Count:**` Cuenta el número de URLs incluidas en el tweet.  
+   **`Quotes:**` Indica si el tweet contiene palabras entre comillas.  
 
    
 ##0.3 LDA.ipynb
