@@ -1,6 +1,6 @@
 #  Informe de Avances del Proyecto de Investigación 
  
-Nuestro proyecto se centra en el análisis de una base de datos de tweets relacionados con el debate sobre el aborto en Argentina. La base fue recolectado por Pablo Celayes. Estos tweets fueron recolectados utilizando una serie de hashtags que inicialmente parecían reflejar las principales posturas sobre el tema. Los hashtags utilizados para la recolección incluyen:
+Nuestro proyecto se centra en el análisis de una base de datos de tweets relacionados con el debate sobre la sanción de la ley del aborto en Argentina. La base fue recolectado por Pablo Celayes. Estos tweets fueron recolectados utilizando una serie de hashtags que inicialmente parecían reflejar las principales posturas sobre el tema. Los hashtags utilizados para la recolección incluyen:
 
 - A favor del aborto legal:
   - `#abortolegal`, `#abortolegalya`, `#abortolegalesvida`, `#AbortoLegalEsSalud`, `#novotencontralasmujeres`, `#quesealey`, `#queelabortosealey`, `#AbortoSeraLey`
@@ -39,9 +39,27 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 13.  Como una primera medida de las comunidades hacemos la matriz de confusion entre posturas obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’.
 14. Extraemos aleatoriamente 20 tweets de cada comunidad. Este proceso nos permitirá evaluarlos de manera anecdótica y, posteriormente, elaborar la matriz de confusión que compare nuestras evaluaciones con las comunidades.
 15. Hacemos la matriz de confusion entre la evaluacion anecdotica, y obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’. 
-16. Definimos una nueva variable llamada postura que asignamos la categoría si a los tweets que estan en las comunidades 0,1, 3 y 19 y no a los tweets que estan en la comunidad 2. Exportamos la base como 'comunidades.csv'
+16. Definimos una nueva variable llamada postura que asignamos la categoría si a los tweets que estan en las comunidades 0,1, 3 y 19 y no a los tweets que estan en la comunidad 2. Exportamos la base como 'comunidades.csv'.
+
+##0.2.1 obtencion_caractesticas_comunidades
+Extraemos características de los tweets que puedan ser utilizadas como variables explicativas en modelos de clasificación, donde la variable dependiente a predecir son las comunidades a las que pertenecen los usuarios. Para ello
+1. Leemos la base de datos 'comunidades.csv'.
+2. Obtenemos las características textuales de los tweets:
+   **`Question Mark`:** Indica si el tweet contiene al menos un signo de interrogación (¿ o ?).
+   **`Question Mark Count:`** Cuenta el número total de signos de interrogación.
+   **`Starts with Question Mark:`** Indica si el tweet comienza con un signo de interrogación.
+   **`Ends with Mark Count:`** Indica si el tweet termina con un signo de interrogación.
+   **`Upper Ratio:`** Proporción de letras en mayúsculas sobre el total de letras en el tweet.
+   **`Exclamation Mark:`** Indica si el tweet contiene al menos un signo de admiración (¡ o !)
+   **`Exclamation Mark Count:`**  Cuenta el número total de signos de admiración en el tweet.
+   **`Ellipsis Occurrence:`**  Indica si el tweet contiene tres o más puntos seguidos ("...")
+   **`Hashtag Presence:**` Indica si el tweet incluye hashtags.
+   **`Text Length:**` Largo del texto del tweet después de eliminar menciones, URLs y hashtags.
+   **`URL Count:**` Cuenta el número de URLs incluidas en el tweet.
+   **`Quotes:**` Indica si el tweet contiene palabras entre comillas
+
+   
 ##0.3 LDA.ipynb
-##0.4 obtencion_caractesticas_comunidades
 
 
 ## Cronograma de trabajo
