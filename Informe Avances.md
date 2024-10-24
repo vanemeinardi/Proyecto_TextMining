@@ -31,10 +31,10 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 4.  Cremamos un nuevo dataframe llamado df_pares_filtrados que incluye las columnas **user_name**, **user_name_mencion**, **full_text** y **posicion** y seleccionamos únicamente los tweets que han sido retuiteado más de 5 veces. 
 5. Construimos un grafo a partir de las columnas de la tabla df_pares_filtrados, donde los nodos representan los nombres de los usuarios que aparecen en las columnas **user_name** y **user_name_mencion**
 6. Los nodos estarán conectados si ha habido interacción entre ellos, ya sea a través de un retweet o una mención; en este caso, las aristas corresponden a las filas de la tabla
-
-7. Aplicamos el algoritmo de Louvain con escalado progresivo de la resolución con valores Ninguna, 0, 1, 2 y 3. La resolución óptima obtenida fue Ninguna.
-Obtenemos 77 comunidades, donde las 5 primeras (0, 1, 2, 3 Y 19)  acumulan el 73% de las observaciones (por qué cambian las comunidades cada vez que lo corremos)
-Analizamos la distribucion de los grado de centralidad de cada usuario en cada comunidad. Observamos que muchos de los usuarios tenían muy bajos grados de centralidad, por lo tanto reducimos a la mitad cantidad de nodos, quedándonos con aquellos que tenían mayor grado de centralidad
+7. Aplicamos el algoritmo de Louvain con escalado progresivo de la resolución con valores Ninguna,  1, 2 y 3. La resolución óptima obtenida fue Ninguna.
+8. Obtenemos 92 comunidades, donde las 5 primeras (0, 1, 2, 3 Y 19)  acumulan el 72% de las observaciones.
+9. Volvemos a calcular las particiones por comunidades utilizando una resolución de `None` en el DataFrame `filtered_comunidades`, que incluye únicamente a los usuarios de las 5 comunidades más grandes. Además, incorporamos el grado de centralidad para identificar los nodos más conectados dentro de cada comunidad.
+10. Analizamos la distribucion de los grado de centralidad de cada usuario en cada comunidad. Observamos que muchos de los usuarios tenían muy bajos grados de centralidad, por lo tanto reducimos a la mitad cantidad de nodos, quedándonos con aquellos que tenían mayor grado de centralidad
 Exportamos la base de datos con las comunidades para luego hacer una selección aleatoria de 20 tweets dentro de las 5 comunidades para hacer una evaluación anecdótica. 
 Al hacer lla matriz de confusión comunidad vs. posición, obtenemos que la comunidad 0,1, 3 y 19, corresponden a la posición ‘si’; la comunidad 2 a la posición ‘no’. Asumiendo que esta asociación entre posiciones y comunidades es correcta, agrupamos las primeras comunidades mencionadas para formar una única (comunidad 2).La comunidad 2 fue llamada comunidad 0 
 De todos los usuarios mas influyentes que hemos seleccionado, la comunidad 0 representa el 65% de los usuarios, por lo tanto la comunidad 1 el 35%.
