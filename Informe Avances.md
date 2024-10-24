@@ -63,10 +63,17 @@ Extraemos características de los tweets que puedan ser utilizadas como variable
    4.2. Convertimos los tweets en vectores usando tfidf vectorizer y los utilizamos para entrenar una regresión logística, alcanzando un accuracy de 0.89.  
    4.3. Una vez entrenado el modelo, tomamos las 20 palabras con coeficientes de mayor peso en valor absoluto y cramos un nuevo vectorizador solo con esas palabras.  
    4.4.  Ajustamos el vectorizador personalizado a los tweets originales para crear nuevas características con estas palabras, y lo añadimos al DataFrame df_preproces. Lo exportamos como 'df_unigramas.csv'.    
+     
+## 0.3 LDA.ipynb   
+Vamos a aplicar el modelo LDA (Latent Dirichlet Allocation) para detectar tópicos presentes en los tweets, con el objetivo de utilizarlos como posibles posturas.
+1. Leemeos la base de datos 'tweets_junio_procesado.csv'.
+2. Limpiamos la base:
+   2.1.  Eliminamos aquellos tweets que estaban recortados, ya que durante los experimentos con LDA introducían ruido y afectaban negativamente los resultados.   
+   2.2. Eliminamos URLs, menciones de usuarios y el símbolo de numeral (#) en los hashtags, manteniendo únicamente el texto. La eliminacion completa de los hashtags empeoraban la deteccion de tópicos, por lo tanto fueron conservados.  
+   2.3. Eliminamos de puntuación, RT (retweets) y stopwords.
+   2.4. Convertimos todo el texto  de los tweets a minúsculas.
+
    
-##0.3 LDA.ipynb
-
-
 ## Cronograma de trabajo
 - Construcción de  características textuales, estructurales y conversacionales (28/10)
 - Aprender dos clasificadores de stance usando comunidades como clases y usando tópicos como clases (Todo el mes de noviembre) 
