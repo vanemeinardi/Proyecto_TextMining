@@ -74,10 +74,10 @@ Vamos a aplicar el modelo LDA (Latent Dirichlet Allocation) para detectar tópic
    2.4. Convertimos todo el texto  de los tweets a minúsculas.  
 3. Para mejorar la detección de tópicos en los tweets, balanceamos los datos mediante un submuestreo de la clase mayoritaria. Esto permitió una mejor identificación de tópicos, ya que inicialmente, al aplicar LDA, predominaban palabras relacionadas con la postura 'sí'.
 4. Aplicamos CountVectorizer, donde el min_df=10000 (solo se consideraron palabras que aparecían al menos 10.000 veces) y max_df=0.99 (se excluyeron palabras que aparecían en más del 99% de los tweets).
-5. Ajuste del modelo LDA:
+5. Ajuste del modelo LDA:  
    5.1. Entrenamos el modelo LDA sobre el conjunto balanceado con 2 tópicos. Este número fue elegido tras realizar varias pruebas con distintos valores de tópicos.
    5.2. Utilizamos el modelo entrenado para predecir los tópicos en el conjunto completo de tweets_junio_recortados.  
-   5.3. Realizamos la matriz de confusión La matriz entre los tópicos identificados por LDA y las posturas, obteniendo que el tópico 0 se correspondía en un 62% con la postura 'no' y el tópico 1 se correspondía en un 98% con la postura 'sí'.
+   5.3. Realizamos la matriz de confusión La matriz entre los tópicos identificados por LDA y las posturas, obteniendo que el tópico 0 se correspondía en un 79% con la postura 'si' y el tópico 1 se correspondía en un 80% con la postura 'no'.
    
 ## Cronograma de trabajo
 - Construcción de  características textuales, estructurales y conversacionales (semana del 28/10).  
