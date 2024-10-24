@@ -24,10 +24,10 @@ Filtramos la base por las  columnas de interés: retweet_count, full_text, user_
 6. Exportamos la base de taos como tweets_junio_procesado.csv para luego usarla en el siguiente código.
 
 ## 02.Deteccion_comunidades.ipynb
-1. Leemos la base de datos tweets_junio_procesados.csv.
-2. Generamos dos nuevas columnas: mención y retweet.
-La primera columna, **mención**, extrae el `screen_name` de los usuarios que han sido mencionados en el tweet, ya sea de manera intencional o a través de un retweet. La segunda columna, **retweet**, es de tipo booleano y señala si el tweet es un retweet o no.
-3. De la base de datos datos aborto_junio_users.csv vamos a extraer la identidad del screen_name, y así generar una nueva columna **user_name_mencion**.
+1. Leemos la base de datos tweets_junio_procesados.csv.  
+2. Generamos dos nuevas columnas: mención y retweet.  
+La primera columna, **mención**, extrae el `screen_name` de los usuarios que han sido mencionados en el tweet, ya sea de manera intencional o a través de un retweet. La segunda columna, **retweet**, es de tipo booleano y señala si el tweet es un retweet o no.  
+3. De la base de datos datos aborto_junio_users.csv vamos a extraer la identidad del screen_name, y así generar una nueva columna **user_name_mencion**.  
 4.  Cremamos un nuevo dataframe llamado df_pares_filtrados que incluye las columnas **user_name**, **user_name_mencion**, **full_text** y **posicion** y seleccionamos únicamente los tweets que han sido retuiteado más de 5 veces. 
 5. Construimos un grafo a partir de las columnas de la tabla df_pares_filtrados, donde los nodos representan los nombres de los usuarios que aparecen en las columnas **user_name** y **user_name_mencion**
 6. Los nodos estarán conectados si ha habido interacción entre ellos, ya sea a través de un retweet o una mención; en este caso, las aristas corresponden a las filas de la tabla
@@ -65,21 +65,21 @@ Extraemos características de los tweets que puedan ser utilizadas como variable
    4.4.  Ajustamos el vectorizador personalizado a los tweets originales para crear nuevas características con estas palabras, y lo añadimos al DataFrame df_preproces. Lo exportamos como 'df_unigramas.csv'.    
      
 ## 0.3 LDA.ipynb   
-Vamos a aplicar el modelo LDA (Latent Dirichlet Allocation) para detectar tópicos presentes en los tweets, con el objetivo de utilizarlos como posibles posturas.
-1. Leemeos la base de datos 'tweets_junio_procesado.csv'.
+Vamos a aplicar el modelo LDA (Latent Dirichlet Allocation) para detectar tópicos presentes en los tweets, con el objetivo de utilizarlos como posibles posturas.  
+1. Leemeos la base de datos 'tweets_junio_procesado.csv'.  
 2. Limpiamos la base:  
    2.1.  Eliminamos aquellos tweets que estaban recortados, ya que durante los experimentos con LDA introducían ruido y afectaban negativamente los resultados. Exportamos la nueva tabla como 'tweets_junio_recortados.csv'.   
    2.2. Eliminamos URLs, menciones de usuarios y el símbolo de numeral (#) en los hashtags, manteniendo únicamente el texto. La eliminacion completa de los hashtags empeoraban la deteccion de tópicos, por lo tanto fueron conservados.  
-   2.3. Eliminamos de puntuación, RT (retweets) y stopwords.
+   2.3. Eliminamos de puntuación, RT (retweets) y stopwords.  
    2.4. Convertimos todo el texto  de los tweets a minúsculas.  
-3. Para mejorar la detección de tópicos en los tweets, balanceamos los datos mediante un submuestreo de la clase mayoritaria. Esto permitió una mejor identificación de tópicos, ya que inicialmente, al aplicar LDA, predominaban palabras relacionadas con la postura 'sí'.
-4. Aplicamos CountVectorizer, donde el min_df=10000 (solo se consideraron palabras que aparecían al menos 10.000 veces) y max_df=0.99 (se excluyeron palabras que aparecían en más del 99% de los tweets).
-5. Ajuste del modelo LDA:  
-   5.1. Entrenamos el modelo LDA sobre el conjunto balanceado con 2 tópicos. Este número fue elegido tras realizar varias pruebas con distintos valores de tópicos.
+3. Para mejorar la detección de tópicos en los tweets, balanceamos los datos mediante un submuestreo de la clase mayoritaria. Esto permitió una mejor identificación de tópicos, ya que inicialmente, al aplicar LDA, predominaban palabras relacionadas con la postura 'sí'.  
+4. Aplicamos CountVectorizer, donde el min_df=10000 (solo se consideraron palabras que aparecían al menos 10.000 veces) y max_df=0.99 (se excluyeron palabras que aparecían en más del 99% de los tweets).  
+5. Ajuste del modelo LDA:   
+   5.1. Entrenamos el modelo LDA sobre el conjunto balanceado con 2 tópicos. Este número fue elegido tras realizar varias pruebas con distintos valores de tópicos.  
    5.2. Utilizamos el modelo entrenado para predecir los tópicos en el conjunto completo de tweets_junio_recortados.  
-   5.3. Realizamos la matriz de confusión La matriz entre los tópicos identificados por LDA y las posturas, obteniendo que el tópico 0 se correspondía en un 79% con la postura 'si' y el tópico 1 se correspondía en un 80% con la postura 'no'.
-6. Agregamos los tópicos a la tabla tweets_junio_recortados y la exportamos como 'tweets_junio_LDA.csv'.
-7. Realizamos un muestreo para realizar la evaluación anecdótica.
+   5.3. Realizamos la matriz de confusión La matriz entre los tópicos identificados por LDA y las posturas, obteniendo que el tópico 0 se correspondía en un 79% con la postura 'si' y el tópico 1 se correspondía en un 80% con la postura 'no'.  
+6. Agregamos los tópicos a la tabla tweets_junio_recortados y la exportamos como 'tweets_junio_LDA.csv'.  
+7. Realizamos un muestreo para realizar la evaluación anecdótica.  
    
 ## Cronograma de trabajo
 - Construcción de  características textuales, estructurales y conversacionales (semana del 28/10).  
