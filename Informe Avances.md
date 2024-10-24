@@ -41,7 +41,7 @@ La primera columna, **mención**, extrae el `screen_name` de los usuarios que ha
 15. Hacemos la matriz de confusion entre la evaluacion anecdotica, y obtenemos que la comunidad 0,1, 3 y 19, podría asociarse a la posición ‘si’; la comunidad 2 a la posición ‘no’. 
 16. Definimos una nueva variable llamada postura que asignamos la categoría si a los tweets que estan en las comunidades 0,1, 3 y 19 y no a los tweets que estan en la comunidad 2. Exportamos la base como 'comunidades.csv'.
 
-##0.2.1 obtencion_caractesticas_comunidades
+## 0.2.1 obtencion_caractesticas_comunidades
 Extraemos características de los tweets que puedan ser utilizadas como variables explicativas en modelos de clasificación, donde la variable dependiente a predecir son las comunidades a las que pertenecen los usuarios. Para ello
 1. Leemos la base de datos 'comunidades.csv'.  
 2. Obtenemos las características textuales de los tweets:   
