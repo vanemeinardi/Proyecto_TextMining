@@ -62,7 +62,7 @@ Extraemos características de los tweets que puedan ser utilizadas como variable
    4.1. Pre-Procesamos todos los tweets del dataset con un stemmer (de scikit-learn) en español quitando hashtags, nombres de usuario y urls. Obteniendo el DataFrame 'df_preproces'.   
    4.2. Convertimos los tweets en vectores usando tfidf vectorizer y los utilizamos para entrenar una regresión logística, alcanzando un accuracy de 0.89.  
    4.3. Una vez entrenado el modelo, tomamos las 20 palabras con coeficientes de mayor peso en valor absoluto y cramos un nuevo vectorizador solo con esas palabras.  
-   4.4.  Ajustamos el vectorizador personalizado a los tweets originales para crear nuevas características con estas palabras, y lo sñadimos al DataFrame df_preproces.  
+   4.4.  Ajustamos el vectorizador personalizado a los tweets originales para crear nuevas características con estas palabras, y lo añadimos al DataFrame df_preproces. Lo exportamos como 'df_unigramas.csv'.    
    
 ##0.3 LDA.ipynb
 
