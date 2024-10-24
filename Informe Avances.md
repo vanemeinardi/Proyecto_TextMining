@@ -17,16 +17,9 @@ Leemos las bases de datos aborto_junio_tweets.csv, que contiene tweets comprendi
 Filtramos la base por las  columnas de interés: retweet_count, full_text, user_name y user_id, posicion. 
 
 1. **`retweet_count`:**  Esta columna indica el número de veces que un tweet ha sido retuiteado.  
-  
-
 2. **`full_text`:**   Contiene el texto completo del tweet.  
-   - 
 3. **`user_name`:**  Es el nombre de usuario del autor del tweet.  
-   
-
 4. **`user_id`:**  Es un identificador único que Twitter asigna a cada usuario.  
-   -
-
 5. **`posicion`:**   Indica la postura o posición del tweet respecto al tema del aborto, con base a los hashtags. 
    
 
