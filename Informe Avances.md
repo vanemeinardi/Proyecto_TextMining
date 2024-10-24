@@ -14,24 +14,19 @@ A continuación, se presentan los códigos utilizados en el proyecto, junto con 
 
 ## 0.1-crear-dataframes.ipynb
 Leemos las bases de datos aborto_junio_tweets.csv, que contiene tweets comprendidos en el mes de junio.  
-Filtramos la base por las  columnas de interés: retweet_count, full_text, user_name y user_id, posicion. A continuación se explica el propósito de cada una de las columnas seleccionadas para el análisis:
+Filtramos la base por las  columnas de interés: retweet_count, full_text, user_name y user_id, posicion. 
 
-1. **`retweet_count`:**  
-   - **Descripción:** Esta columna indica el número de veces que un tweet ha sido retuiteado.  
+1. **`retweet_count`:**  Esta columna indica el número de veces que un tweet ha sido retuiteado.  
   
 
-2. **`full_text`:**  
-   - **Descripción:** Contiene el texto completo del tweet.  
+2. **`full_text`:**   Contiene el texto completo del tweet.  
    - 
-3. **`user_name`:**  
-   - **Descripción:** Es el nombre de usuario del autor del tweet.  
+3. **`user_name`:**  Es el nombre de usuario del autor del tweet.  
    
 
-4. **`user_id`:**  
-   - **Descripción:** Es un identificador único que Twitter asigna a cada usuario.  
+4. **`user_id`:**  Es un identificador único que Twitter asigna a cada usuario.  
    -
 
-5. **`posicion`:**  
-   - **Descripción:** Indica la postura o posición del tweet respecto al tema del aborto, con base a los hashtags. 
+5. **`posicion`:**   Indica la postura o posición del tweet respecto al tema del aborto, con base a los hashtags. 
    
 
