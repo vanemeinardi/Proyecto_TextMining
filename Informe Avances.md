@@ -79,7 +79,7 @@ Vamos a aplicar el modelo LDA (Latent Dirichlet Allocation) para detectar tópic
    5.2. Utilizamos el modelo entrenado para predecir los tópicos en el conjunto completo de tweets_junio_recortados.  
    5.3. Realizamos la matriz de confusión La matriz entre los tópicos identificados por LDA y las posturas, obteniendo que el tópico 0 se correspondía en un 79% con la postura 'si' y el tópico 1 se correspondía en un 80% con la postura 'no'.  
 6. Agregamos los tópicos a la tabla tweets_junio_recortados y la exportamos como 'tweets_junio_LDA.csv'.  
-7. Realizamos un muestreo para realizar la evaluación anecdótica.  
+7. Realizamos un muestreo de 40 observaciones de cada tópico para la evaluación anecdótica. Exportamos la tabla como 'muestras_topicos.xlsx'. 
    
 ## Cronograma de trabajo
 - Construcción de  características textuales, estructurales y conversacionales (semana del 28/10).  
